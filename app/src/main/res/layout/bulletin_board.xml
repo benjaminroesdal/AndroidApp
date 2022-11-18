@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="28dp"
         android:text="Get Images"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,9 +46,11 @@
         android:id="@+id/clearButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="28dp"
         android:text="Clear board"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_second" />
 </androidx.constraintlayout.widget.ConstraintLayout>

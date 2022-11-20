@@ -38,7 +38,7 @@ public class BulletinBoard extends Fragment {
     //List to contain list of image responses from API
     private List<ImageResponse> _images;
     //BaseURL for API
-    private String url = "http://10.108.130.84:5155/api/Image";
+    private String url = "http://192.168.0.90:5155/api/Image";
     private String _error;
     //Relative layout for images to be added to.
     RelativeLayout layout;

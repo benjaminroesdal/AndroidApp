@@ -41,7 +41,7 @@ public class PictureTaker extends Fragment {
     //Imagestring to post to the API.
     private String imageStr;
     //BaseURL for API.
-    private String url = "http://10.108.130.84:5155/api/Image";
+    private String url = "http://192.168.0.90:5155/api/Image";
     private static final int CAMERA_REQUEST = 1888;
 
     @Override
@@ -110,23 +110,7 @@ public class PictureTaker extends Fragment {
             public void onErrorResponse(VolleyError error) {
                 textView.setText(error.toString());
             }
-        }) {
-            @Override
-            protected Map<String, String> getParams() {
-                // below line we are creating a map for
-                // storing our values in key and value pair.
-                Map<String, String> params = new HashMap<String, String>();
-
-                // on below line we are passing our key
-                // and value pair to our parameters.
-                params.put("Content-Type", "application/json");
-                params.put("imageString", imageStr);
-
-                // at last we are
-                // returning our params.
-                return params;
-            }
-        };
+        });
 
         RequestQueue requestQueue = Volley.newRequestQueue(this.getContext());
         requestQueue.add(jsonObjectRequest);
